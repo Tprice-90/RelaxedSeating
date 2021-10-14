@@ -6,7 +6,10 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
-
+/*Adjust main class*/
+main .pb-3 {
+    font-family: 'Times New Roman', Times, serif;
+}
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -27,6 +30,7 @@ a {
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
+    font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
 }
 @media (min-width: 768px) {
@@ -60,6 +64,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
+  font-family: 'Times New Roman', Times, serif;
   margin-bottom: 60px;
 }
 .footer {

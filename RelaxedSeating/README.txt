@@ -21,5 +21,21 @@ Time: 3:18PM
 Time: 8:35PM
 -needed to remove Rating field from model class because I will re add it after the database is created as 
  another field.
+
+Time: 10:13PM
+-spent past 2 hours looking through css to find where to update font-family, have used ctrl-f to search for
+ the selector, inspected code to see if change had been been made, no success so far, will keep trying...
+
+Time: 11:36PM
+-had to re scaffold the Chairs Controller due to last session not saving...
+
+Time: 12:03AM
+-Testing the app and no CRUD appeared! I AM SO LOST!!!
+
+Time: 12:26AM
+-FINALLY found my mistake: when updating _layout.cshtml I forgot to change the asp Controller property!
+-Taking a sleep break...
+
+
 **************************************************************************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
