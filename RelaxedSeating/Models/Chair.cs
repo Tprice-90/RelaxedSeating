@@ -15,7 +15,6 @@ namespace RelaxedSeating.Models
         [DataType(DataType.Date)]
         public DateTime DateMade { get; set; }
         public decimal Price { get; set; }
-        public int Rating { get; set; }
 
     }
 }
