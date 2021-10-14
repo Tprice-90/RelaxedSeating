@@ -20,17 +20,19 @@ html {
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 body {
-  margin: 0;
-  font-family: 'times new roman',Verdana;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
+    margin: 0;
+    font-family: 'times new roman',Verdana;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #db520d;
 }
 
 [tabindex="-1"]:focus {

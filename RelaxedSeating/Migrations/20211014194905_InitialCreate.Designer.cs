@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelaxedSeating.Data;
 
-namespace RelaxedSeating.Data.Migrations
+namespace RelaxedSeating.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20211014033854_InitialCreate")]
+    [Migration("20211014194905_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

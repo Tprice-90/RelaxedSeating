@@ -8,6 +8,7 @@ a.navbar-brand {
 }
 /*Adjust main class*/
 main .pb-3 {
+    background-color: #1861ac;
     font-family: 'Times New Roman', Times, serif;
 }
 /* Provide sufficient contrast against white background */
@@ -32,6 +33,30 @@ a {
 html {
     font-family: 'Times New Roman', Times, serif;
   font-size: 14px;
+}
+/*
+    Styling Home Page
+*/
+body> .container> .pb-3> .intro {
+    width: 100%;
+    margin: 0 auto;
+}
+body> .container> .pb-3> .intro>.h1 {
+    text-align:center;
+}
+body> .container {
+    text-align: center;
+    padding-top: 0;
+    background-color: #db520d;
+}
+.displayImages> .inventoryImages {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+.displayImages> .inventoryImages img {
+    display: inline-block;
+    width: 25%;
 }
 @media (min-width: 768px) {
   html {

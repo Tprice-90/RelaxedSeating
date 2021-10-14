@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RelaxedSeating.Migrations
+namespace RelaxedSeating.Migrations.RelaxedSeating
 {
     public partial class InitialCreate : Migration
     {
@@ -16,7 +16,8 @@ namespace RelaxedSeating.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Material = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DateMade = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Rating = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

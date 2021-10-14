@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RelaxedSeating.Data;
 
-namespace RelaxedSeating.Migrations
+namespace RelaxedSeating.Migrations.RelaxedSeating
 {
     [DbContext(typeof(RelaxedSeatingContext))]
     partial class RelaxedSeatingContextModelSnapshot : ModelSnapshot
@@ -37,6 +37,9 @@ namespace RelaxedSeating.Migrations
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
 
                     b.HasKey("ChairId");
 

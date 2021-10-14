@@ -50,6 +50,8 @@ html {
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 body {
@@ -60,7 +62,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #db520d;
 }
 
 [tabindex="-1"]:focus {
@@ -546,6 +548,7 @@ pre code {
 }
 
 .container {
+  background-color: #b13e0b;
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 100%;
   padding-right: 15px;
@@ -579,6 +582,7 @@ pre code {
 }
 
 .container-fluid {
+  background-color: #e54511;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;

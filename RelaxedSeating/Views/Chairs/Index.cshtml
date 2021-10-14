@@ -1,7 +1,7 @@
-﻿@model IEnumerable<RelaxedSeating.Models.Chair>
+﻿@model RelaxedSeating.Models.ChairMaterialViewModel
 
 @{
-    ViewData["Title"] = "Chair";
+    ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
@@ -9,26 +9,40 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<form asp-controller="Chairs" asp-action="Index" method="get">
+    <p>
+
+        <select asp-for="ChairMaterial" asp-items="Model.Materials">
+            <option value="">All</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Chairs[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Material)
+                @Html.DisplayNameFor(model => model.Chairs[0].Material)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateMade)
+                @Html.DisplayNameFor(model => model.Chairs[0].DateMade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Chairs[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chairs[0].Rating)
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Chairs) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -41,6 +55,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ChairId">Edit</a> |

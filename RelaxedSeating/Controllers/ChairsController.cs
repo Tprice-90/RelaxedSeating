@@ -20,9 +20,33 @@ namespace RelaxedSeating.Controllers
         }
 
         // GET: Chairs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string chairMaterial, string searchString)
         {
-            return View(await _context.Chair.ToListAsync());
+            // Use LINQ to get list of materials.
+            IQueryable<string> materialQuery = from c in _context.Chair
+                                            orderby c.Material
+                                            select c.Material;
+
+            var chairs = from c in _context.Chair
+                         select c;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                chairs = chairs.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(chairMaterial))
+            {
+                chairs = chairs.Where(x => x.Material == chairMaterial);
+            }
+
+            var chairMaterialVM = new ChairMaterialViewModel
+            {
+                Materials = new SelectList(await materialQuery.Distinct().ToListAsync()),
+                Chairs = await chairs.ToListAsync()
+            };
+
+            return View(chairMaterialVM);
         }
 
         // GET: Chairs/Details/5
@@ -54,7 +78,7 @@ namespace RelaxedSeating.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChairId,Name,Material,DateMade,Price")] Chair chair)
+        public async Task<IActionResult> Create([Bind("ChairId,Name,Material,DateMade,Price,Rating")] Chair chair)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +110,7 @@ namespace RelaxedSeating.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ChairId,Name,Material,DateMade,Price")] Chair chair)
+        public async Task<IActionResult> Edit(int id, [Bind("ChairId,Name,Material,DateMade,Price,Rating")] Chair chair)
         {
             if (id != chair.ChairId)
             {
