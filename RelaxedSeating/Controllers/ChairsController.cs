@@ -18,6 +18,11 @@ namespace RelaxedSeating.Controllers
         {
             _context = context;
         }
+        //Adding view for About Us Page
+        public IActionResult About()
+        {
+            return View();
+        }
 
         // GET: Chairs
         public async Task<IActionResult> Index(string chairMaterial, string searchString)
