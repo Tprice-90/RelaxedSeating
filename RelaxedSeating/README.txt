@@ -81,5 +81,10 @@ Time: 4:27PM
 -All controllers and functions appear to be working properly, now to alter the CSS a little bit more and 
  add some images
 
+ Time: 5:00PM
+ -Changed background color of home page div, changed fonts to times new roman
+ -needed to add About page view to chairs controller because the link would load a blank page...
+ -Added images of chairs to the home page as well as the logo
+
 **************************************************************************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
